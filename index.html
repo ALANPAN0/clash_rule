@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GitHub Pages URL Parameter Example</title>
+</head>
+<body>
+  <h1>URL Parameter Example</h1>
+  <p id="output"></p>
+
+  <script>
+    // 获取URL参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const target = urlParams.get('target');
+
+    // 在页面上显示参数的值
+    if (target) {
+      document.getElementById('output').textContent = `Target: ${target}`;
+    } else {
+      document.getElementById('output').textContent = 'No target parameter found.';
+    }
+  </script>
+</body>
+</html>
